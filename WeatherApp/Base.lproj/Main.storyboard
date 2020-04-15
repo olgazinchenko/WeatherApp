@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" highlightedImage="Background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSn-ao-SOB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oom-Ac-te8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rRa-07-gbh">
+                                <rect key="frame" x="8" y="419.5" width="398" height="57.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLf-bQ-CeP">
+                                <rect key="frame" x="67.5" y="485" width="279" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rRa-07-gbh" secondAttribute="trailing" constant="8" id="78K-hw-28u"/>
+                            <constraint firstItem="rRa-07-gbh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="C4c-Gg-XfU"/>
+                            <constraint firstItem="kSn-ao-SOB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GT2-N7-HPj"/>
+                            <constraint firstAttribute="bottom" secondItem="kSn-ao-SOB" secondAttribute="bottom" id="GhP-rT-Wwf"/>
+                            <constraint firstItem="oom-Ac-te8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HGg-em-lQ2"/>
+                            <constraint firstItem="rRa-07-gbh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jjm-cN-3Ym"/>
+                            <constraint firstItem="kSn-ao-SOB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U91-Vq-xmM"/>
+                            <constraint firstItem="oom-Ac-te8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h1l-No-zR0"/>
+                            <constraint firstItem="dLf-bQ-CeP" firstAttribute="top" secondItem="rRa-07-gbh" secondAttribute="bottom" constant="8" id="oPv-gs-img"/>
+                            <constraint firstItem="kSn-ao-SOB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oYG-b5-6f4"/>
+                            <constraint firstItem="dLf-bQ-CeP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qWy-it-SNh"/>
+                            <constraint firstItem="rRa-07-gbh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vog-Vh-ySo"/>
+                            <constraint firstItem="oom-Ac-te8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zC3-WW-HyD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="rRa-07-gbh" id="IGr-3p-YXJ"/>
+                        <outlet property="searchBar" destination="oom-Ac-te8" id="xf5-NJ-5D2"/>
+                        <outlet property="temperatureLabel" destination="dLf-bQ-CeP" id="17e-Od-RDg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1080" height="1920"/>
+    </resources>
+</document>
